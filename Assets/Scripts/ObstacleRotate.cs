@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace ColorSwitch
@@ -8,15 +9,26 @@ namespace ColorSwitch
         [SerializeField] private bool shouldRotateInPositiveDirection = true;
 
         private int _rotateDirection;
+        private WaitForSeconds _timeBetweenEachRotate;
 
         private void Awake()
         {
             _rotateDirection = shouldRotateInPositiveDirection ? 1 : -1;
+            _timeBetweenEachRotate = new WaitForSeconds(rotateTime / 360f);
         }
 
-        private void Update()
+        private void Start()
         {
-            transform.Rotate(Vector3.forward, _rotateDirection * 360f / rotateTime);
+            StartCoroutine(StartRotate());
+        }
+
+        private IEnumerator StartRotate()
+        {
+            while (true)
+            {
+                transform.Rotate(Vector3.forward, _rotateDirection * 1);
+                yield return _timeBetweenEachRotate;
+            }
         }
     }
 }
