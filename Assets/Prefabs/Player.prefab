@@ -135,5 +135,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4232ccdc5ded49be9dfa063fc8348444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 450
+  jumpForce: 400
   playerColorToColorMap: {fileID: 11400000, guid: 10b4639e554fd40f1832d3b8d40545f3, type: 2}
