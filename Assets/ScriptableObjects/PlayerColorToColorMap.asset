@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: PlayerColorToColorMap
   m_EditorClassIdentifier: 
   colorMaps:
-  - playerColor: 0
+  - gameColor: 0
     color: {r: 1, g: 0.2392157, b: 0.22352943, a: 1}
-  - playerColor: 1
+  - gameColor: 1
     color: {r: 0, g: 0.39607847, b: 1, a: 1}
-  - playerColor: 2
+  - gameColor: 2
     color: {r: 0.16862746, g: 0.8705883, b: 0, a: 1}
-  - playerColor: 3
+  - gameColor: 3
     color: {r: 0.72156864, g: 0, b: 0.8941177, a: 1}
