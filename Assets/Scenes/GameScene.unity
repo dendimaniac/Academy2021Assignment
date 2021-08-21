@@ -379,7 +379,10 @@ MonoBehaviour:
   obstacleList:
   - {fileID: 3167882092175811124, guid: d370a57af2ffc49339c95d6787733cfc, type: 3}
   - {fileID: -9107552841956016202, guid: 80c266fff2e0342b5a33df379aa73cf5, type: 3}
+  - {fileID: 5822818562426285, guid: 185965d8d861c482f94fd929682163d2, type: 3}
+  - {fileID: 5097520262623514027, guid: 2450aed1155d14c6ea2e8ebb70c03cb9, type: 3}
   - {fileID: 6269969137156476323, guid: b7cdbf2d93c8643f59724a865b9d1ace, type: 3}
+  - {fileID: 2398475219323298360, guid: 0629c8831f647442fb3f1a8e15e4bbe6, type: 3}
   colorSwitcherPool: {fileID: 1468288170}
   initialSpawnPosition: {fileID: 103375013}
   initialObstacleCount: 5
