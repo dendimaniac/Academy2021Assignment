@@ -113,3 +113,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ba17815ad0d4a3397e571a5df6450d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupClip: {fileID: 8300000, guid: a95a94b9dcb8d4dcaad68920680b5d5d, type: 3}
+  soundEffectEventChannel: {fileID: 11400000, guid: 2d29e83ed20034522bc0edfbcaef6811, type: 2}

@@ -5,6 +5,9 @@ namespace ColorSwitch
     [RequireComponent(typeof(CircleCollider2D))]
     public class ColorSwitcher : MonoBehaviour
     {
+        [SerializeField] private AudioClip pickupClip;
+        [SerializeField] private SoundEffectEventChannelSO soundEffectEventChannel;
+
         private ColorSwitcherPool _colorSwitcherPool;
 
         public void Init(ColorSwitcherPool colorSwitcherPool)
@@ -18,6 +21,7 @@ namespace ColorSwitch
             if (!playerController) return;
 
             playerController.SwitchNewPlayerColor();
+            soundEffectEventChannel.RequestSoundEffect(pickupClip);
             _colorSwitcherPool.ReturnToPool(this);
         }
     }
