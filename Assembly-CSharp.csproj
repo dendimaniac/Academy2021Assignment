@@ -41,31 +41,36 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\IObserver.cs" />
+     <Compile Include="Assets\Scripts\ColorSwitcherPool.cs" />
+     <Compile Include="Assets\Scripts\ObstacleCleaner.cs" />
+     <Compile Include="Assets\Scripts\ScorePopupPool.cs" />
+     <Compile Include="Assets\Scripts\PlayerSpriteSelectionUI.cs" />
+     <Compile Include="Assets\Scripts\ObstacleRotate.cs" />
+     <Compile Include="Assets\Scripts\ISubject.cs" />
+     <Compile Include="Assets\Scripts\StarPickedUpEventChannel.cs" />
+     <Compile Include="Assets\Scripts\ScorePopupManager.cs" />
+     <Compile Include="Assets\Scripts\GenericObjectPool.cs" />
      <Compile Include="Assets\Scripts\GameColor.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\PlayerColorToColorMap.cs" />
+     <Compile Include="Assets\Scripts\PlayerSpriteSelectionItem.cs" />
      <Compile Include="Assets\Scripts\ColorSwitcher.cs" />
      <Compile Include="Assets\Scripts\PlayerDiedEventChannel.cs" />
-     <Compile Include="Assets\Scripts\OffCameraPlayerKiller.cs" />
-     <Compile Include="Assets\Scripts\PlayerDeathEffect.cs" />
-     <Compile Include="Assets\Scripts\Star.cs" />
-     <Compile Include="Assets\Scripts\ObstacleColorSection.cs" />
-     <Compile Include="Assets\Scripts\ObstacleRotate.cs" />
-     <Compile Include="Assets\Scripts\ObstacleController.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
-     <Compile Include="Assets\Scripts\StarPickedUpEventChannel.cs" />
-     <Compile Include="Assets\Scripts\ObstacleCleaner.cs" />
+     <Compile Include="Assets\Scripts\OffCameraPlayerKiller.cs" />
      <Compile Include="Assets\Scripts\StarCountUI.cs" />
-     <Compile Include="Assets\Scripts\GameHandler.cs" />
-     <Compile Include="Assets\Scripts\GameOverMenu.cs" />
      <Compile Include="Assets\Scripts\HighScoreManager.cs" />
-     <Compile Include="Assets\Scripts\ScorePopupManager.cs" />
+     <Compile Include="Assets\Scripts\GameOverMenu.cs" />
      <Compile Include="Assets\Scripts\ScorePopup.cs" />
-     <Compile Include="Assets\Scripts\GenericObjectPool.cs" />
-     <Compile Include="Assets\Scripts\ColorSwitcherPool.cs" />
-     <Compile Include="Assets\Scripts\ScorePopupPool.cs" />
-     <Compile Include="Assets\Scripts\PlayerColorToColorMap.cs" />
+     <Compile Include="Assets\Scripts\ObstacleController.cs" />
+     <Compile Include="Assets\Scripts\ObstacleColorSection.cs" />
      <Compile Include="Assets\Scripts\ColorMap.cs" />
+     <Compile Include="Assets\Scripts\PlayerDeathEffect.cs" />
+     <Compile Include="Assets\Scripts\GameHandler.cs" />
+     <Compile Include="Assets\Scripts\PlayerSpriteChoice.cs" />
+     <Compile Include="Assets\Scripts\Star.cs" />
      <None Include="Assets\Sounds\sounds_copyright.txt" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.1.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
