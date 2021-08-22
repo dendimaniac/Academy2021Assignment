@@ -13,6 +13,10 @@ namespace ColorSwitch
         [SerializeField] private float jumpForce;
         [SerializeField] private PlayerColorToColorMapSO playerColorToColorMap;
         [SerializeField] private PlayerSpriteChoiceSO playerSpriteChoice;
+        
+        [Space]
+        [SerializeField] private AudioClip jumpClip;
+        [SerializeField] private SoundEffectEventChannelSO soundEffectEventChannel;
 
         public GameColor CurrentColor { get; private set; }
         
@@ -40,6 +44,7 @@ namespace ColorSwitch
 
             _rigidbody2D.velocity = Vector2.zero;
             _rigidbody2D.AddForce(Vector2.up * jumpForce);
+            soundEffectEventChannel.RequestSoundEffect(jumpClip);
         }
 
         private void SetInitialPlayerSprite()
