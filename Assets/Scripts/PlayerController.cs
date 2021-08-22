@@ -5,27 +5,33 @@ using Random = UnityEngine.Random;
 
 namespace ColorSwitch
 {
-    [RequireComponent(typeof(SpriteRenderer))]
     [RequireComponent(typeof(CircleCollider2D))]
     [RequireComponent(typeof(Rigidbody2D))]
     public class PlayerController : MonoBehaviour
     {
+        [SerializeField] private SpriteRenderer spriteRenderer;
         [SerializeField] private float jumpForce;
         [SerializeField] private PlayerColorToColorMap playerColorToColorMap;
+        [SerializeField] private PlayerSpriteChoice playerSpriteChoice;
 
         public GameColor CurrentColor { get; private set; }
-
-        private SpriteRenderer _spriteRenderer;
+        
         private Rigidbody2D _rigidbody2D;
         private readonly Dictionary<GameColor, Color> _colorMapDictionary = new Dictionary<GameColor, Color>();
 
         private void Awake()
         {
-            _spriteRenderer = GetComponent<SpriteRenderer>();
             _rigidbody2D = GetComponent<Rigidbody2D>();
 
+            SetInitialPlayerSprite();
             SetupColorMapDictionary();
             SwitchNewPlayerColor();
+        }
+        
+        public void SwitchNewPlayerColor()
+        {
+            CurrentColor = GetRandomPlayerColor();
+            spriteRenderer.color = _colorMapDictionary[CurrentColor];
         }
 
         private void Update()
@@ -36,10 +42,9 @@ namespace ColorSwitch
             _rigidbody2D.AddForce(Vector2.up * jumpForce);
         }
 
-        public void SwitchNewPlayerColor()
+        private void SetInitialPlayerSprite()
         {
-            CurrentColor = GetRandomPlayerColor();
-            _spriteRenderer.color = _colorMapDictionary[CurrentColor];
+            spriteRenderer.sprite = playerSpriteChoice.CurrentSpriteChoice;
         }
         
         private void SetupColorMapDictionary()
