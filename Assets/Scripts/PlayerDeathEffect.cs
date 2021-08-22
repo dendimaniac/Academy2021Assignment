@@ -5,7 +5,7 @@ namespace ColorSwitch
     public class PlayerDeathEffect : MonoBehaviour
     {
         [SerializeField] private ParticleSystem playerDeath;
-        [SerializeField] private PlayerDiedEventChannel playerDiedEventChannel;
+        [SerializeField] private PlayerDiedEventChannelSO playerDiedEventChannel;
 
         private void Awake()
         {

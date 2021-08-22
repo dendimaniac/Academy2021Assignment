@@ -8,8 +8,8 @@ namespace ColorSwitch
         [SerializeField] private TMP_Text starCountText;
         [SerializeField] private CanvasGroup starCountCanvasGroup;
         [Range(0, 1f)] [SerializeField] private float fadeAmount;
-        [SerializeField] private StarPickedUpEventChannel starPickedUpEventChannel;
-        [SerializeField] private PlayerDiedEventChannel playerDiedEventChannel;
+        [SerializeField] private StarPickedUpEventChannelSO starPickedUpEventChannel;
+        [SerializeField] private PlayerDiedEventChannelSO playerDiedEventChannel;
 
         private int _currentStarCount;
 

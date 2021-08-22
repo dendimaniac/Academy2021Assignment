@@ -4,7 +4,7 @@ namespace ColorSwitch
 {
     public class OffCameraPlayerKiller : MonoBehaviour
     {
-        [SerializeField] private PlayerDiedEventChannel playerDiedEventChannel;
+        [SerializeField] private PlayerDiedEventChannelSO playerDiedEventChannel;
 
         private void OnTriggerEnter2D(Collider2D other)
         {

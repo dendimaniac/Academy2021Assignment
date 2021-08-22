@@ -9,9 +9,9 @@ namespace ColorSwitch
 
         private Vector3 OwnPosition => transform.position;
         
-        private StarPickedUpEventChannel _starPickedUpEventChannel;
+        private StarPickedUpEventChannelSO _starPickedUpEventChannel;
 
-        public void Init(StarPickedUpEventChannel starPickedUpEventChannel)
+        public void Init(StarPickedUpEventChannelSO starPickedUpEventChannel)
         {
             _starPickedUpEventChannel = starPickedUpEventChannel;
         }

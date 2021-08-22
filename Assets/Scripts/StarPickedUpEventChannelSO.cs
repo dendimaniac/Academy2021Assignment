@@ -4,7 +4,7 @@ using UnityEngine;
 namespace ColorSwitch
 {
     [CreateAssetMenu(fileName = "StarPickedUpEventChannel", menuName = "Events/StarPickedUpEventChannel")]
-    public class StarPickedUpEventChannel : ScriptableObject
+    public class StarPickedUpEventChannelSO : ScriptableObject
     {
         public Action<Vector3> StarPickedUp;
 

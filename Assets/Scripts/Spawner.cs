@@ -5,7 +5,7 @@ namespace ColorSwitch
 {
     public class Spawner : MonoBehaviour
     {
-        [SerializeField] private StarPickedUpEventChannel starPickedUpEventChannel;
+        [SerializeField] private StarPickedUpEventChannelSO starPickedUpEventChannel;
         [SerializeField] private List<ObstacleController> obstacleList;
         [SerializeField] private ColorSwitcherPool colorSwitcherPool;
         [SerializeField] private Transform initialSpawnPosition;

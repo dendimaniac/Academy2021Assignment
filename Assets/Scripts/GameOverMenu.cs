@@ -9,8 +9,8 @@ namespace ColorSwitch
         [SerializeField] private GameObject gameOverMenu;
         [SerializeField] private TMP_Text highScoreText;
 
-        [SerializeField] private StarPickedUpEventChannel starPickedUpEventChannel;
-        [SerializeField] private PlayerDiedEventChannel playerDiedEventChannel;
+        [SerializeField] private StarPickedUpEventChannelSO starPickedUpEventChannel;
+        [SerializeField] private PlayerDiedEventChannelSO playerDiedEventChannel;
 
         private int _currentScore;
 

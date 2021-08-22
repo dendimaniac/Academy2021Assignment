@@ -4,7 +4,7 @@ using UnityEngine;
 namespace ColorSwitch
 {
     [CreateAssetMenu(fileName = "PlayerSpriteChoice", menuName = "PlayerSpriteChoice")]
-    public class PlayerSpriteChoice : ScriptableObject
+    public class PlayerSpriteChoiceSO : ScriptableObject
     {
         public List<Sprite> allPossibleSprites;
 

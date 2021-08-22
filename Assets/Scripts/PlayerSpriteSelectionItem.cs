@@ -8,10 +8,10 @@ namespace ColorSwitch
         [SerializeField] private Image backgroundImage;
         [SerializeField] private Image playerSprite;
 
-        private PlayerSpriteChoice _playerSpriteChoice;
+        private PlayerSpriteChoiceSO _playerSpriteChoice;
         private ISubject _subject;
 
-        public void Init(Sprite sprite, PlayerSpriteChoice playerSpriteChoice, ISubject subject)
+        public void Init(Sprite sprite, PlayerSpriteChoiceSO playerSpriteChoice, ISubject subject)
         {
             playerSprite.sprite = sprite;
             _playerSpriteChoice = playerSpriteChoice;

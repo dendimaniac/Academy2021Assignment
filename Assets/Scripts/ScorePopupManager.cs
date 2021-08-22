@@ -5,7 +5,7 @@ namespace ColorSwitch
     public class ScorePopupManager : MonoBehaviour
     {
         [SerializeField] private ScorePopupPool scorePopupPool;
-        [SerializeField] private StarPickedUpEventChannel starPickedUpEventChannel;
+        [SerializeField] private StarPickedUpEventChannelSO starPickedUpEventChannel;
 
         private void Awake()
         {

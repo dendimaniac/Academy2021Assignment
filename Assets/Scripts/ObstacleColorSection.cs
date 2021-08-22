@@ -6,9 +6,9 @@ namespace ColorSwitch
     {
         [SerializeField] private GameColor gameColor;
         
-        private PlayerDiedEventChannel _playerDiedEventChannel;
+        private PlayerDiedEventChannelSO _playerDiedEventChannel;
 
-        public void Init(PlayerDiedEventChannel playerDiedEventChannel)
+        public void Init(PlayerDiedEventChannelSO playerDiedEventChannel)
         {
             _playerDiedEventChannel = playerDiedEventChannel;
         }

@@ -8,8 +8,8 @@ namespace ColorSwitch
         [SerializeField] private Transform endpointTransform;
         [SerializeField] private Star star;
         [SerializeField] private List<ObstacleColorSection> obstacleColorSectionList;
-        [SerializeField] private StarPickedUpEventChannel starPickedUpEventChannel;
-        [SerializeField] private PlayerDiedEventChannel playerDiedEventChannel;
+        [SerializeField] private StarPickedUpEventChannelSO starPickedUpEventChannel;
+        [SerializeField] private PlayerDiedEventChannelSO playerDiedEventChannel;
 
         public Vector3 EndpointPosition => endpointTransform.position;
 

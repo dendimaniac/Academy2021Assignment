@@ -6,7 +6,7 @@ namespace ColorSwitch
     public class PlayerSpriteSelectionUI : MonoBehaviour, ISubject
     {
         [SerializeField] private PlayerSpriteSelectionItem playerSpriteSelectionItemPrefab;
-        [SerializeField] private PlayerSpriteChoice playerSpriteChoice;
+        [SerializeField] private PlayerSpriteChoiceSO playerSpriteChoice;
 
         private readonly List<IObserver> _observers = new List<IObserver>();
 

@@ -11,8 +11,8 @@ namespace ColorSwitch
     {
         [SerializeField] private SpriteRenderer spriteRenderer;
         [SerializeField] private float jumpForce;
-        [SerializeField] private PlayerColorToColorMap playerColorToColorMap;
-        [SerializeField] private PlayerSpriteChoice playerSpriteChoice;
+        [SerializeField] private PlayerColorToColorMapSO playerColorToColorMap;
+        [SerializeField] private PlayerSpriteChoiceSO playerSpriteChoice;
 
         public GameColor CurrentColor { get; private set; }
         

@@ -4,7 +4,7 @@ using UnityEngine;
 namespace ColorSwitch
 {
     [CreateAssetMenu(fileName = "PlayerDiedEventChannel", menuName = "Events/PlayerDiedEventChannel")]
-    public class PlayerDiedEventChannel : ScriptableObject
+    public class PlayerDiedEventChannelSO : ScriptableObject
     {
         public Action<PlayerController> PlayerDied;
 

@@ -8,7 +8,7 @@ namespace ColorSwitch
         [SerializeField] private Transform playerTransform;
         [SerializeField] private float moveSpeed;
         
-        [SerializeField] private PlayerDiedEventChannel playerDiedEventChannel;
+        [SerializeField] private PlayerDiedEventChannelSO playerDiedEventChannel;
         
         private Vector3 _targetPosition;
 
