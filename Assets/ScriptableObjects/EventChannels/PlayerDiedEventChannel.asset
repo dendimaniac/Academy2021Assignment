@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48fe9630d12444c83886fd71d240ee2, type: 3}
   m_Name: PlayerDiedEventChannel
   m_EditorClassIdentifier: 
+  playerDiedClip: {fileID: 8300000, guid: 6ae2d0a32091d4860a95d1af162ff7f5, type: 3}
+  soundEffectEventChannel: {fileID: 11400000, guid: 2d29e83ed20034522bc0edfbcaef6811, type: 2}
