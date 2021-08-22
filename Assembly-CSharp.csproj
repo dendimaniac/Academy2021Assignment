@@ -71,6 +71,8 @@
      <Compile Include="Assets\Scripts\GameHandler.cs" />
      <Compile Include="Assets\Scripts\PlayerSpriteChoiceSO.cs" />
      <Compile Include="Assets\Scripts\Star.cs" />
+     <Compile Include="Assets\Scripts\AudioManager.cs" />
+     <Compile Include="Assets\Scripts\SoundEffectEventChannelSO.cs" />
      <None Include="Assets\Sounds\sounds_copyright.txt" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.1.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
