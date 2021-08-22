@@ -12,6 +12,7 @@ namespace ColorSwitch
         [SerializeField] private int initialObstacleCount;
         [SerializeField] private float distanceBetweenObstacles;
 
+        private int _lastObstacleIndex = -1;
         private Vector3 _nextSpawnPosition;
         private Vector3 _obstaclesOffset;
 
@@ -50,7 +51,14 @@ namespace ColorSwitch
 
         private ObstacleController GetRandomObstacle()
         {
-            return obstacleList[Random.Range(0, obstacleList.Count)];
+            int randomObstacleIndex;
+            do
+            {
+                randomObstacleIndex = Random.Range(0, obstacleList.Count);
+            } while (randomObstacleIndex == _lastObstacleIndex);
+
+            _lastObstacleIndex = randomObstacleIndex;
+            return obstacleList[randomObstacleIndex];
         }
 
         private void OnDestroy()
