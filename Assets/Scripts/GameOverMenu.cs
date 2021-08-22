@@ -22,7 +22,9 @@ namespace ColorSwitch
 
         public void TryAgain()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("GameScene"));
+            SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("UI"));
+            SceneManager.LoadSceneAsync("GameScene", LoadSceneMode.Additive);
         }
 
         private void OnPlayerDied(PlayerController obj)
