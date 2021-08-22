@@ -8,9 +8,13 @@ namespace ColorSwitch
     {
         public Action<Vector3> StarPickedUp;
 
+        [SerializeField] private AudioClip starPickupClip;
+        [SerializeField] private SoundEffectEventChannelSO soundEffectEventChannel;
+
         public void RaiseEvent(Vector3 starPosition)
         {
             StarPickedUp?.Invoke(starPosition);
+            soundEffectEventChannel.RequestSoundEffect(starPickupClip);
         }
     }
 }
