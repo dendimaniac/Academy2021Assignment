@@ -24,7 +24,7 @@ namespace ColorSwitch
             starPickedUpEventChannel.StarPickedUp += OnStarPickedUp;
         }
 
-        private void Start()
+        public void SpawnInitialObstacles()
         {
             for (var i = 0; i < initialObstacleCount; i++)
             {
