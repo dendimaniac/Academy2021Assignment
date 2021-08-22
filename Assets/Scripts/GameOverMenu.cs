@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace ColorSwitch
 {
@@ -17,6 +18,11 @@ namespace ColorSwitch
         {
             playerDiedEventChannel.PlayerDied += OnPlayerDied;
             starPickedUpEventChannel.StarPickedUp += OnStarPickedUp;
+        }
+
+        public void TryAgain()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         private void OnPlayerDied(PlayerController obj)
