@@ -11,7 +11,7 @@ namespace ColorSwitch
     {
         [SerializeField] private SpriteRenderer spriteRenderer;
         [SerializeField] private float jumpForce;
-        [SerializeField] private PlayerColorToColorMapSO playerColorToColorMap;
+        [SerializeField] private GameColorToColorMapSO gameColorToColorMap;
         [SerializeField] private PlayerSpriteChoiceSO playerSpriteChoice;
         
         [Space]
@@ -54,7 +54,7 @@ namespace ColorSwitch
         
         private void SetupColorMapDictionary()
         {
-            foreach (var colorMap in playerColorToColorMap.colorMaps)
+            foreach (var colorMap in gameColorToColorMap.ColorMaps)
             {
                 _colorMapDictionary.Add(colorMap.gameColor, colorMap.color);
             }

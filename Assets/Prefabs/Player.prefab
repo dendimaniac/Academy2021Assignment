@@ -85,7 +85,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3456389995779002887}
   jumpForce: 400
-  playerColorToColorMap: {fileID: 11400000, guid: 10b4639e554fd40f1832d3b8d40545f3, type: 2}
+  gameColorToColorMap: {fileID: 11400000, guid: 10b4639e554fd40f1832d3b8d40545f3, type: 2}
   playerSpriteChoice: {fileID: 11400000, guid: 0a363f32ad5a345e3a60087d8bddb4fc, type: 2}
   jumpClip: {fileID: 8300000, guid: 92d387d4df85a4dd18221397defa1ab2, type: 3}
   soundEffectEventChannel: {fileID: 11400000, guid: 2d29e83ed20034522bc0edfbcaef6811, type: 2}
