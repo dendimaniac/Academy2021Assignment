@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace ColorSwitch
 {
@@ -21,21 +18,18 @@ namespace ColorSwitch
         public GameColor CurrentColor { get; private set; }
         
         private Rigidbody2D _rigidbody2D;
-        private readonly Dictionary<GameColor, Color> _colorMapDictionary = new Dictionary<GameColor, Color>();
 
         private void Awake()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
 
             SetInitialPlayerSprite();
-            SetupColorMapDictionary();
-            SwitchNewPlayerColor();
         }
-        
-        public void SwitchNewPlayerColor()
+
+        public void ApplyNewGameColor(GameColor newGameColor)
         {
-            CurrentColor = GetRandomPlayerColor();
-            spriteRenderer.color = _colorMapDictionary[CurrentColor];
+            CurrentColor = newGameColor;
+            spriteRenderer.color = gameColorToColorMap.ColorMapDictionary[newGameColor];
         }
 
         private void Update()
@@ -50,25 +44,6 @@ namespace ColorSwitch
         private void SetInitialPlayerSprite()
         {
             spriteRenderer.sprite = playerSpriteChoice.CurrentSpriteChoice;
-        }
-        
-        private void SetupColorMapDictionary()
-        {
-            foreach (var colorMap in gameColorToColorMap.ColorMaps)
-            {
-                _colorMapDictionary.Add(colorMap.gameColor, colorMap.color);
-            }
-        }
-        
-        private GameColor GetRandomPlayerColor()
-        {
-            var values = Enum.GetValues(typeof(GameColor));
-            GameColor newGameColor;
-            do
-            {
-                newGameColor = (GameColor)values.GetValue(Random.Range(0, values.Length));
-            } while (newGameColor == CurrentColor);
-            return newGameColor;
         }
     }
 }
