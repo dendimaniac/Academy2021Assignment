@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398f959fc6344f9c8d3bac7495d1ae5d, type: 3}
   m_Name: GameColorToColorMap
   m_EditorClassIdentifier: 
-  colorMaps:
-  - gameColor: 0
-    color: {r: 1, g: 0.2392157, b: 0.22352943, a: 1}
+  ColorMaps:
   - gameColor: 1
-    color: {r: 0, g: 0.39607847, b: 1, a: 1}
+    color: {r: 1, g: 0.2392157, b: 0.22352943, a: 1}
   - gameColor: 2
-    color: {r: 0.16862746, g: 0.8705883, b: 0, a: 1}
+    color: {r: 0, g: 0.39607847, b: 1, a: 1}
   - gameColor: 3
+    color: {r: 0.16862746, g: 0.8705883, b: 0, a: 1}
+  - gameColor: 4
     color: {r: 0.72156864, g: 0, b: 0.8941177, a: 1}
