@@ -374,6 +374,7 @@ MonoBehaviour:
   - {fileID: 5097520262623514027, guid: 2450aed1155d14c6ea2e8ebb70c03cb9, type: 3}
   - {fileID: 6269969137156476323, guid: b7cdbf2d93c8643f59724a865b9d1ace, type: 3}
   - {fileID: 2398475219323298360, guid: 0629c8831f647442fb3f1a8e15e4bbe6, type: 3}
+  - {fileID: 4182562105183555949, guid: 9cfdb42e1be1e480d97e4811c406a334, type: 3}
   colorSwitcherPool: {fileID: 1468288170}
   initialSpawnPosition: {fileID: 103375013}
   initialObstacleCount: 5
@@ -555,7 +556,7 @@ GameObject:
   - component: {fileID: 2011955792}
   - component: {fileID: 2011955791}
   m_Layer: 0
-  m_Name: GameHandler
+  m_Name: GameSetup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -573,6 +574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67fcd2ae779443b6b2d1ff4e2de0d9bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 783524578635485109}
   spawner: {fileID: 828915543}
 --- !u!4 &2011955792
 Transform:
@@ -747,3 +749,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ea0cb29af6ea4a4d85ffdc321123702, type: 3}
+--- !u!114 &783524578635485109 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 783524578273005114, guid: 8ea0cb29af6ea4a4d85ffdc321123702, type: 3}
+  m_PrefabInstance: {fileID: 783524578635485108}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4232ccdc5ded49be9dfa063fc8348444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
