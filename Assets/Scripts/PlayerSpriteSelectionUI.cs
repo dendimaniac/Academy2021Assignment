@@ -12,7 +12,7 @@ namespace ColorSwitch
 
         private void Start()
         {
-            foreach (var sprite in playerSpriteChoice.allPossibleSprites)
+            foreach (var sprite in playerSpriteChoice.AllPossibleSprites)
             {
                 var spawnedSelectionItem = Instantiate(playerSpriteSelectionItemPrefab, transform);
                 spawnedSelectionItem.Init(sprite, playerSpriteChoice, this);

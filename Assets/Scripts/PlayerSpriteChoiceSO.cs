@@ -6,15 +6,16 @@ namespace ColorSwitch
     [CreateAssetMenu(fileName = "PlayerSpriteChoice", menuName = "PlayerSpriteChoice")]
     public class PlayerSpriteChoiceSO : ScriptableObject
     {
-        public List<Sprite> allPossibleSprites;
+        public List<Sprite> AllPossibleSprites;
 
         [HideInInspector] public Sprite CurrentSpriteChoice;
 
-        private void Awake()
+        private void OnValidate()
         {
-            if (allPossibleSprites == null || allPossibleSprites.Count == 0) return;
+            if (AllPossibleSprites == null || AllPossibleSprites.Count == 0) return;
+            if (AllPossibleSprites.Contains(CurrentSpriteChoice)) return;
             
-            CurrentSpriteChoice = allPossibleSprites[0];
+            CurrentSpriteChoice = AllPossibleSprites[0];
         }
     }
 }
