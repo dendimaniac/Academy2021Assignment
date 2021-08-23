@@ -1,3 +1,4 @@
+using ColorSwitch.Core;
 using UnityEngine;
 
 namespace ColorSwitch
