@@ -34,9 +34,9 @@ namespace ColorSwitch
             highScoreText.text = $"{HighScoreManager.GetHighScore()}";
         }
         
-        private void OnStarPickedUp(Vector3 _)
+        private void OnStarPickedUp(Vector3 starPosition, int scoreGained)
         {
-            ++_currentScore;
+            _currentScore += scoreGained;
         }
 
         private void OnDestroy()

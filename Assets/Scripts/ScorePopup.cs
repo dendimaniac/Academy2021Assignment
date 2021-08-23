@@ -1,28 +1,33 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 namespace ColorSwitch
 {
+    [RequireComponent(typeof(TMP_Text))]
     public class ScorePopup : MonoBehaviour
     {
         [Range(0, 2f)] [SerializeField] private float maxPopupVerticalAddition;
         [SerializeField] private float popupSpeed;
         [SerializeField] private float cleanupDelay;
 
+        private TMP_Text _scoreGainedText;
         private Vector3 _maxPopupPosition;
         private ScorePopupPool _scorePopupPool;
         private WaitForSeconds _cleanupSecondsDelay;
         
         private void Awake()
         {
+            _scoreGainedText = GetComponent<TMP_Text>();
             _cleanupSecondsDelay = new WaitForSeconds(cleanupDelay);
         }
 
-        public void Init(ScorePopupPool scorePopupPool, Vector3 starPosition)
+        public void Init(ScorePopupPool scorePopupPool, Vector3 starPosition, int scoreGained)
         {
             _scorePopupPool = scorePopupPool;
             _maxPopupPosition = starPosition + new Vector3(0, maxPopupVerticalAddition, 0);
             transform.position = starPosition;
+            _scoreGainedText.text = $"+{scoreGained}";
         }
 
         private void Update()

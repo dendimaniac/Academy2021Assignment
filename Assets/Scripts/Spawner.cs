@@ -44,7 +44,7 @@ namespace ColorSwitch
             _nextSpawnPosition = colorSwitcherPosition + _obstaclesOffset;
         }
         
-        private void OnStarPickedUp(Vector3 _)
+        private void OnStarPickedUp(Vector3 starPosition, int scoreGained)
         {
             SpawnObstacle();
         }

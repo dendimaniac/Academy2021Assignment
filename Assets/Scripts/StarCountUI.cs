@@ -19,9 +19,9 @@ namespace ColorSwitch
             playerDiedEventChannel.PlayerDied += OnPlayerDied;
         }
 
-        private void OnStarPickedUp(Vector3 _)
+        private void OnStarPickedUp(Vector3 starPosition, int scoreGained)
         {
-            ++_currentStarCount;
+            _currentStarCount += scoreGained;
             starCountText.text = $"{_currentStarCount}";
         }
 

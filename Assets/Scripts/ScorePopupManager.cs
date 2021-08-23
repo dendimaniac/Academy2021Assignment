@@ -12,10 +12,10 @@ namespace ColorSwitch
             starPickedUpEventChannel.StarPickedUp += OnStarPickedUp;
         }
 
-        private void OnStarPickedUp(Vector3 starPosition)
+        private void OnStarPickedUp(Vector3 starPosition, int scoreGained)
         {
             var scorePopup = scorePopupPool.Get(transform);
-            scorePopup.Init(scorePopupPool, starPosition);
+            scorePopup.Init(scorePopupPool, starPosition, scoreGained);
             scorePopup.gameObject.SetActive(true);
         }
 

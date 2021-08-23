@@ -6,6 +6,7 @@ namespace ColorSwitch
     public class Star : MonoBehaviour
     {
         [SerializeField] private ParticleSystem starCollected;
+        [SerializeField] private int scoreToGain = 1;
 
         private Vector3 OwnPosition => transform.position;
         
@@ -22,7 +23,7 @@ namespace ColorSwitch
             if (!playerController) return;
 
             Instantiate(starCollected, OwnPosition, Quaternion.identity);
-            _starPickedUpEventChannel.RaiseEvent(OwnPosition);
+            _starPickedUpEventChannel.RaiseEvent(OwnPosition, scoreToGain);
             Destroy(gameObject);
         }
     }
