@@ -41,6 +41,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Initialization.cs" />
      <Compile Include="Assets\Scripts\IObserver.cs" />
      <Compile Include="Assets\Scripts\ColorSwitcherPool.cs" />
      <Compile Include="Assets\Scripts\ObstacleCleaner.cs" />
@@ -50,14 +51,16 @@
      <Compile Include="Assets\Scripts\ISubject.cs" />
      <Compile Include="Assets\Scripts\StarPickedUpEventChannelSO.cs" />
      <Compile Include="Assets\Scripts\ScorePopupManager.cs" />
+     <Compile Include="Assets\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Scripts\GenericObjectPool.cs" />
      <Compile Include="Assets\Scripts\GameColor.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\PlayerColorToColorMapSO.cs" />
+     <Compile Include="Assets\Scripts\GameColorToColorMapSO.cs" />
      <Compile Include="Assets\Scripts\PlayerSpriteSelectionItem.cs" />
      <Compile Include="Assets\Scripts\ColorSwitcher.cs" />
      <Compile Include="Assets\Scripts\PlayerDiedEventChannelSO.cs" />
+     <Compile Include="Assets\Scripts\SoundEffectEventChannelSO.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\OffCameraPlayerKiller.cs" />
      <Compile Include="Assets\Scripts\StarCountUI.cs" />
@@ -71,9 +74,6 @@
      <Compile Include="Assets\Scripts\GameSetup.cs" />
      <Compile Include="Assets\Scripts\PlayerSpriteChoiceSO.cs" />
      <Compile Include="Assets\Scripts\Star.cs" />
-     <Compile Include="Assets\Scripts\AudioManager.cs" />
-     <Compile Include="Assets\Scripts\SoundEffectEventChannelSO.cs" />
-     <Compile Include="Assets\Scripts\Initialization.cs" />
      <None Include="Assets\Sounds\sounds_copyright.txt" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.1.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
