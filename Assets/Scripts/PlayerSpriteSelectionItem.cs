@@ -8,6 +8,10 @@ namespace ColorSwitch
         [SerializeField] private Image backgroundImage;
         [SerializeField] private Image playerSprite;
 
+        [Header("Design settings")]
+        [SerializeField] private Color selectedBackgroundColor;
+        [SerializeField] private Color deselectedBackgroundColor;
+
         private PlayerSpriteChoiceSO _playerSpriteChoice;
         private ISubject _subject;
 
@@ -28,12 +32,12 @@ namespace ColorSwitch
 
         public void SetAsSelected()
         {
-            backgroundImage.color = Color.gray;
+            backgroundImage.color = selectedBackgroundColor;
         }
 
         public void SetAsDeselected()
         {
-            backgroundImage.color = Color.black;
+            backgroundImage.color = deselectedBackgroundColor;
         }
 
         public void Receive(Sprite newSprite)
