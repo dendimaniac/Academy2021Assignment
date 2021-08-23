@@ -1163,7 +1163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d37f76dd8c04598bfce1cfaee1f6271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: -1653080373116081215, guid: e1dc6749ce89841caa8ff3392c651afb, type: 3}
+  prefab: {fileID: -1653080373116081215, guid: 163990f54d72e4dd29858981c5b5a8ae, type: 3}
 --- !u!1 &1546565557
 GameObject:
   m_ObjectHideFlags: 0
@@ -1598,7 +1598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07debf3904e14bb5aba390b249f17523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpriteSelectionItemPrefab: {fileID: 1775471286542332779, guid: c4e8d6ad753114004a9a4fbc2b0ea508, type: 3}
+  playerSpriteSelectionItemPrefab: {fileID: 1775471286542332779, guid: 32093d8d8eb394a7a99f60b7a17e248c, type: 3}
   playerSpriteChoice: {fileID: 11400000, guid: 0a363f32ad5a345e3a60087d8bddb4fc, type: 2}
 --- !u!224 &3195051297124491304
 RectTransform:
