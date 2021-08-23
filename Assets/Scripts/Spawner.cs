@@ -13,6 +13,7 @@ namespace ColorSwitch
         [SerializeField] private float distanceBetweenObstacles;
 
         private int _lastObstacleIndex = -1;
+        private GameColor _lastGameColor;
         private Vector3 _nextSpawnPosition;
         private Vector3 _obstaclesOffset;
 
@@ -24,8 +25,9 @@ namespace ColorSwitch
             starPickedUpEventChannel.StarPickedUp += OnStarPickedUp;
         }
 
-        public void SpawnInitialObstacles()
+        public void SpawnInitialObstacles(GameColor initialPlayerColor)
         {
+            _lastGameColor = initialPlayerColor;
             for (var i = 0; i < initialObstacleCount; i++)
             {
                 SpawnObstacle();
@@ -36,11 +38,13 @@ namespace ColorSwitch
         {
             var randomObstacleToSpawn = GetRandomObstacle();
             var spawnedObstacle = Instantiate(randomObstacleToSpawn, _nextSpawnPosition, Quaternion.identity);
+            spawnedObstacle.Init(_lastGameColor);
             var colorSwitcherPosition = spawnedObstacle.EndpointPosition + _obstaclesOffset;
             var colorSwitcher = colorSwitcherPool.Get(null);
-            colorSwitcher.Init(colorSwitcherPool);
+            colorSwitcher.Init(colorSwitcherPool, _lastGameColor);
             colorSwitcher.transform.position = colorSwitcherPosition;
             colorSwitcher.gameObject.SetActive(true);
+            _lastGameColor = colorSwitcher.GameColorToApply;
             _nextSpawnPosition = colorSwitcherPosition + _obstaclesOffset;
         }
         

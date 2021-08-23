@@ -8,11 +8,14 @@ namespace ColorSwitch
         [SerializeField] private AudioClip pickupClip;
         [SerializeField] private SoundEffectEventChannelSO soundEffectEventChannel;
 
+        public GameColor GameColorToApply { get; private set; }
+        
         private ColorSwitcherPool _colorSwitcherPool;
 
-        public void Init(ColorSwitcherPool colorSwitcherPool)
+        public void Init(ColorSwitcherPool colorSwitcherPool, GameColor previousGameColor)
         {
             _colorSwitcherPool = colorSwitcherPool;
+            GameColorToApply = GameColorHelper.GetRandom(previousGameColor);
         }
         
         private void OnTriggerEnter2D(Collider2D other)
@@ -20,7 +23,7 @@ namespace ColorSwitch
             var playerController = other.GetComponent<PlayerController>();
             if (!playerController) return;
 
-            playerController.SwitchNewPlayerColor();
+            playerController.ApplyNewGameColor(GameColorToApply);
             soundEffectEventChannel.RequestSoundEffect(pickupClip);
             _colorSwitcherPool.ReturnToPool(this);
         }
