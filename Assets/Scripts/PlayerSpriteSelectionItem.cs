@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace ColorSwitch
 {
-    public class PlayerSpriteSelectionItem : MonoBehaviour, IObserver
+    public class PlayerSpriteSelectionItem : MonoBehaviour, IObserver<Sprite>
     {
         [SerializeField] private Image backgroundImage;
         [SerializeField] private Image playerSprite;
@@ -13,9 +13,9 @@ namespace ColorSwitch
         [SerializeField] private Color deselectedBackgroundColor;
 
         private PlayerSpriteChoiceSO _playerSpriteChoice;
-        private ISubject _subject;
+        private ISubject<Sprite> _subject;
 
-        public void Init(Sprite sprite, PlayerSpriteChoiceSO playerSpriteChoice, ISubject subject)
+        public void Init(Sprite sprite, PlayerSpriteChoiceSO playerSpriteChoice, ISubject<Sprite> subject)
         {
             playerSprite.sprite = sprite;
             _playerSpriteChoice = playerSpriteChoice;

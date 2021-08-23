@@ -3,12 +3,12 @@ using UnityEngine;
 
 namespace ColorSwitch
 {
-    public class PlayerSpriteSelectionUI : MonoBehaviour, ISubject
+    public class PlayerSpriteSelectionUI : MonoBehaviour, ISubject<Sprite>
     {
         [SerializeField] private PlayerSpriteSelectionItem playerSpriteSelectionItemPrefab;
         [SerializeField] private PlayerSpriteChoiceSO playerSpriteChoice;
 
-        private readonly List<IObserver> _observers = new List<IObserver>();
+        private readonly List<IObserver<Sprite>> _observers = new List<IObserver<Sprite>>();
 
         private void Start()
         {
@@ -27,12 +27,12 @@ namespace ColorSwitch
             }
         }
 
-        public void Subscribe(IObserver observer)
+        public void Subscribe(IObserver<Sprite> observer)
         {
             _observers.Add(observer);
         }
 
-        public void Unsubscribe(IObserver observer)
+        public void Unsubscribe(IObserver<Sprite> observer)
         {
             _observers.Remove(observer);
         }

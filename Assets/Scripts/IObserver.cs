@@ -2,8 +2,8 @@ using UnityEngine;
 
 namespace ColorSwitch
 {
-    public interface IObserver
+    public interface IObserver<in T> where T : Object
     {
-        void Receive(Sprite newSprite);
+        void Receive(T objectObserving);
     }
 }
