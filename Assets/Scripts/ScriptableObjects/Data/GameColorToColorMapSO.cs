@@ -12,7 +12,17 @@ namespace ColorSwitch.ScriptableObjects.Data
         
         public readonly Dictionary<GameColor, Color> ColorMapDictionary = new Dictionary<GameColor, Color>();
 
+        private void Awake()
+        {
+            UpdateColorMapDictionary();
+        }
+
         private void OnValidate()
+        {
+            UpdateColorMapDictionary();
+        }
+        
+        private void UpdateColorMapDictionary()
         {
             foreach (var colorMap in ColorMaps)
             {
